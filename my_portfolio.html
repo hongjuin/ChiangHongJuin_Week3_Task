@@ -3,106 +3,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Applied AI</title>
+
+    <title>Hong Juin | Applied AI Portfolio</title>
+    <meta
+        name="description"
+        content="Hong Juin's personal portfolio showcasing Applied AI, machine vision, embedded systems, and robotics projects."
+    >
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <!-- Header / Navigation -->
     <header class="site-header">
-        <a class="logo" href="#home">My Portfolio</a>
+        <div class="container header-content">
+            <a class="logo" href="#home">HJ<span>.</span></a>
 
-        <nav class="navigation">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navMenu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <button id="themeButton" class="theme-button">
-            Dark Mode
-        </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#activities">Activities</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="theme-button" id="themeButton" type="button">
+                <span id="themeIcon" aria-hidden="true">☾</span>
+                <span id="themeText">Dark mode</span>
+            </button>
+        </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <p class="intro">Hello, I'm</p>
-            <h1>Hong Juin</h1>
-            <h2>Applied AI Student | Interested in AI & Robotics</h2>
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow">Hello, I'm</p>
 
-            <p class="hero-description">
-                I am learning how artificial intelligence, software,
-                and robotics can work together to solve real-world problems.
-            </p>
+                    <h1>Hong Juin</h1>
 
-            <a class="primary-link" href="#projects">Explore My Projects</a>
-        </section>
+                    <h2>
+                        Applied AI Student
+                        <span class="accent-text">| AI & Robotics</span>
+                    </h2>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
+                    <p class="hero-description">
+                        I am an Applied AI student interested in building intelligent
+                        systems that combine artificial intelligence, machine vision,
+                        embedded systems, and robotics.
+                    </p>
 
-            <p>
-                I am an Applied AI student interested in automation,
-                embedded systems, and intelligent robots. I enjoy learning
-                how software can interact with physical systems.
-            </p>
-        </section>
+                    <div class="hero-buttons">
+                        <a class="button button-primary" href="#projects">
+                            Explore My Projects
+                        </a>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
+                        <a class="button button-secondary" href="#contact">
+                            Contact Me
+                        </a>
+                    </div>
 
-            <div class="skill-list">
-                <span>Python</span>
-                <span>C++</span>
-                <span>Machine Learning</span>
-                <span>Machine Vision</span>
-                <span>Arduino</span>
-                <span>STM32</span>
-                <span>Git and GitHub</span>
+                    <div class="hero-socials">
+                        <a
+                            href="https://github.com/hongjuin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+                        <span>·</span>
+                        <a href="#contact">Get in touch</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Artificial intelligence and robotics illustration">
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="hero-circle">
+                        <span class="hero-symbol">AI</span>
+                        <span class="hero-symbol-small">+</span>
+                        <span class="hero-robot">⚙</span>
+                    </div>
+
+                    <div class="floating-card floating-card-top">
+                        <span class="floating-icon">⌘</span>
+                        <span>Artificial Intelligence</span>
+                    </div>
+
+                    <div class="floating-card floating-card-bottom">
+                        <span class="floating-icon">⚡</span>
+                        <span>Robotics & Embedded Systems</span>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-
-            <div class="project-card">
-                <h3>Project 1: Machine Vision</h3>
-                <p>
-                    Measurement: Use opencv to measure objects without relying trained yolo model.
-                </p>
-                <p>
-                    Classification: Trained yolo model to identify three household items.
-                </p>
-                <p class="project-tools">Tools: Python, OpenCV</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 2: Embedded System</h3>
-                <p>
-                    Simple led blinking and logic condition using Arduino and stm-32.
-                </p>
-                <p> LED reaction game. </p>
-                <p class="project-tools">Tools: C/C++, Microcontroller</p>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-
-            <p>
-                You can find my code and projects on GitHub.
-            </p>
-
-            <a href="https://github.com/hongjuin">
-                Visit My GitHub
+            <a class="scroll-indicator" href="#about">
+                <span>Scroll to explore</span>
+                <span aria-hidden="true">↓</span>
             </a>
+        </section>
+
+        <!-- About Section -->
+        <section class="section section-alt" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Get to know me</p>
+                    <h2>About <span class="accent-text">Me</span></h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I am currently pursuing a Bachelor's degree in
+                            <strong>Applied AI</strong>, where I am developing
+                            knowledge in programming, machine learning, and
+                            intelligent systems.
+                        </p>
+
+                        <p>
+                            My main interest is applying AI to real-world systems,
+                            especially robotics. I enjoy exploring how software,
+                            sensors, and hardware can work together to create
+                            useful autonomous applications.
+                        </p>
+
+                        <p>
+                            I am continuously learning through coursework,
+                            personal projects, and practical engineering
+                            activities. My goal is to develop stronger skills
+                            in AI-driven robotics and intelligent automation.
+                        </p>
+                    </div>
+
+                    <div class="about-highlights">
+                        <article class="highlight-card">
+                            <span class="highlight-icon">🧠</span>
+                            <h3>Artificial Intelligence</h3>
+                            <p>Machine learning, computer vision, and intelligent algorithms.</p>
+                        </article>
+
+                        <article class="highlight-card">
+                            <span class="highlight-icon">🤖</span>
+                            <h3>Robotics</h3>
+                            <p>Exploring autonomous systems, sensors, and robot control.</p>
+                        </article>
+
+                        <article class="highlight-card">
+                            <span class="highlight-icon">🔌</span>
+                            <h3>Embedded Systems</h3>
+                            <p>Connecting software with microcontrollers and physical devices.</p>
+                        </article>
+
+                        <article class="highlight-card">
+                            <span class="highlight-icon">🛠️</span>
+                            <h3>Continuous Learning</h3>
+                            <p>Building skills through practical experiments and projects.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">What I'm learning</p>
+                    <h2>Technical <span class="accent-text">Skills</span></h2>
+                    <p class="section-description">
+                        Technologies and areas I have explored through coursework
+                        and personal practice.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-card-heading">
+                            <span class="skill-icon">💻</span>
+                            <h3>Programming</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card-heading">
+                            <span class="skill-icon">🧠</span>
+                            <h3>AI & Machine Vision</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>Machine Learning</span>
+                            <span>OpenCV</span>
+                            <span>Image Processing</span>
+                            <span>YOLO</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card-heading">
+                            <span class="skill-icon">🔧</span>
+                            <h3>Embedded Systems</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>Arduino</span>
+                            <span>STM32</span>
+                            <span>Microcontrollers</span>
+                            <span>Basic Electronics</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card-heading">
+                            <span class="skill-icon">🗂️</span>
+                            <h3>Tools & Workflow</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Linux</span>
+                            <span>VS Code</span>
+                            <span>SolidWorks</span>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="skills-note">
+                    These are learning areas, not a claim of professional-level
+                    proficiency. I am continuing to improve through practice.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section section-alt" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Things I've built</p>
+                    <h2>My <span class="accent-text">Projects</span></h2>
+                    <p class="section-description">
+                        A selection of projects and practical exercises from my
+                        learning journey.
+                    </p>
+                </div>
+
+                <!-- Project filters -->
+                <div class="project-filters" role="group" aria-label="Filter projects">
+                    <button class="filter-button active" data-filter="all" type="button">
+                        All Projects
+                    </button>
+                    <button class="filter-button" data-filter="vision" type="button">
+                        Machine Vision
+                    </button>
+                    <button class="filter-button" data-filter="embedded" type="button">
+                        Embedded Systems
+                    </button>
+                </div>
+
+                <!-- Project gallery -->
+                <div class="project-gallery">
+                    <article class="project-card" data-category="vision">
+                        <div class="project-image project-image-vision">
+                            <span class="project-image-icon">👁️</span>
+                            <span class="project-image-label">Computer Vision</span>
+                        </div>
+
+                        <div class="project-content">
+                            <p class="project-category">Machine Vision</p>
+                            <h3>Image Measurement with OpenCV</h3>
+                            <p>
+                                A computer vision exercise exploring image
+                                preprocessing, object detection, and measuring
+                                objects from image data without relying on a
+                                trained YOLO model.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                                <span>Image Processing</span>
+                            </div>
+
+                            <button
+                                class="project-details-button"
+                                type="button"
+                                data-project="measurement"
+                            >
+                                View Details <span aria-hidden="true">↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="vision">
+                        <div class="project-image project-image-yolo">
+                            <span class="project-image-icon">🎯</span>
+                            <span class="project-image-label">Object Detection</span>
+                        </div>
+
+                        <div class="project-content">
+                            <p class="project-category">Machine Vision</p>
+                            <h3>YOLO Household Object Detection</h3>
+                            <p>
+                                Trained a YOLO model to identify three selected
+                                household object classes and explored the
+                                object-detection workflow.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>YOLO</span>
+                                <span>Roboflow</span>
+                            </div>
+
+                            <button
+                                class="project-details-button"
+                                type="button"
+                                data-project="yolo"
+                            >
+                                View Details <span aria-hidden="true">↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="embedded">
+                        <div class="project-image project-image-mcu">
+                            <span class="project-image-icon">🔌</span>
+                            <span class="project-image-label">Microcontrollers</span>
+                        </div>
+
+                        <div class="project-content">
+                            <p class="project-category">Embedded Systems</p>
+                            <h3>LED Control with Arduino & STM32</h3>
+                            <p>
+                                Practiced controlling LEDs using program logic
+                                and microcontroller input/output, including
+                                basic condition-based behavior.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>C/C++</span>
+                                <span>Arduino</span>
+                                <span>STM32</span>
+                            </div>
+
+                            <button
+                                class="project-details-button"
+                                type="button"
+                                data-project="led"
+                            >
+                                View Details <span aria-hidden="true">↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="embedded">
+                        <div class="project-image project-image-game">
+                            <span class="project-image-icon">🎮</span>
+                            <span class="project-image-label">Interactive Hardware</span>
+                        </div>
+
+                        <div class="project-content">
+                            <p class="project-category">Embedded Systems</p>
+                            <h3>LED Reaction Game</h3>
+                            <p>
+                                A simple interactive game using microcontroller
+                                logic, LEDs, and user input to practice timing
+                                and response-based programming.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>C/C++</span>
+                                <span>Arduino</span>
+                                <span>Digital I/O</span>
+                            </div>
+
+                            <button
+                                class="project-details-button"
+                                type="button"
+                                data-project="reaction"
+                            >
+                                View Details <span aria-hidden="true">↗</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="project-disclaimer">
+                    Project descriptions can be expanded with photos, source-code
+                    links, and more technical details as the projects develop.
+                </p>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section class="section" id="activities">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Beyond coursework</p>
+                    <h2>Activities & <span class="accent-text">Learning</span></h2>
+                </div>
+
+                <div class="activity-list">
+                    <article class="activity-item">
+                        <div class="activity-marker">01</div>
+                        <div>
+                            <h3>Robotics & Engineering Activities</h3>
+                            <p>
+                                Exploring robotics mechanisms, embedded systems,
+                                and practical engineering through student
+                                activities and independent learning.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="activity-item">
+                        <div class="activity-marker">02</div>
+                        <div>
+                            <h3>Continuous Technical Development</h3>
+                            <p>
+                                Learning tools such as Git, Linux, SolidWorks,
+                                and microcontroller development to support
+                                future AI and robotics projects.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="activity-item">
+                        <div class="activity-marker">03</div>
+                        <div>
+                            <h3>Personal Projects</h3>
+                            <p>
+                                Practicing by building small projects, testing
+                                ideas, debugging problems, and documenting
+                                what I learn.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section section-alt" id="contact">
+            <div class="container contact-container">
+                <div class="section-heading">
+                    <p class="eyebrow">Let's connect</p>
+                    <h2>Contact <span class="accent-text">Me</span></h2>
+                    <p class="section-description">
+                        Feel free to explore my work or connect with me.
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">✉</div>
+                    <h3>Interested in my work?</h3>
+                    <p>
+                        Visit my GitHub profile to see my repositories and
+                        ongoing projects.
+                    </p>
+
+                    <a
+                        class="button button-primary"
+                        href="https://github.com/hongjuin"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit GitHub ↗
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-        <p>© 2026 Your Name. Built with HTML, CSS, and JavaScript.</p>
+        <div class="container footer-content">
+            <p>© <span id="currentYear"></span> Hong Juin</p>
+            <p>Built with HTML, CSS, and JavaScript</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Project details modal -->
+    <dialog class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Close project details"
+            >
+                ×
+            </button>
+
+            <p class="eyebrow" id="modalCategory">Project Details</p>
+            <h2 id="modalTitle">Project title</h2>
+            <p id="modalDescription">Project description.</p>
+
+            <h3>What I practiced</h3>
+            <ul id="modalLearning"></ul>
+
+            <button class="button button-secondary" id="modalCloseButton" type="button">
+                Close
+            </button>
+        </div>
+    </dialog>
 </body>
 </html>
